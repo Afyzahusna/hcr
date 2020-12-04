@@ -9,10 +9,10 @@ class Item extends Model
 {
     //use HasFactory;
     protected $fillable = [
-        'user_id',
+        'item_id',
         'title',
         'reference',
-        'result',
+        'score',
     
     ];
 
