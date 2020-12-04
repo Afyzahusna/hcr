@@ -30,6 +30,8 @@
 
                         Reference 
                         <input name="reference" type="text" class="form-control">
+                        Score
+                        <input name="score" type="text" class="form-control">
 
                        <!-- Description 
                         <input name="description" type="text"

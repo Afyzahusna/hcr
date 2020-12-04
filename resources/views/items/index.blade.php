@@ -35,21 +35,22 @@
                 
                 <table class="table table-striped">
                     <thead><tr>
-                        <th>id</th>
+                        <th>Item_id</th>
                         <th>Title</th>
                         <th>Reference</th>
-                        <th>Action</th>
+                        <th>Score</th>
                     </tr></thead>
 
                     <tbody>
                       
                         @foreach($items as $item)
                     <tr>                 
-                        <td>{{$item->id}}</td>
+                        <td>{{$item->item_id}}</td>
                         <td>{{$item->title}}</td>
                         <td>{{$item->reference}}</td>
-                        <td> <input type="checkbox" class="marks" value="" data-score="2"> </td> 
-                        <script>
+                        <td>{{$item->score}}</td>
+                        <td> <input type="checkbox" class="marks" value=""></td> 
+                        {{-- <script>
                             $('.marks').on('change', function() {
                              var total = 0;
                                 $('.marks:checked').each(function() {
@@ -57,7 +58,7 @@
                                 });
                                  $('#total').text( total.toFixed(2) );
                                 });
-                            </script>
+                            </script> --}}
                         </div>
                         <td><a class="btn btn-success btn-sm" href=""> Show <i class="fa fa-list-alt">
                             </i>

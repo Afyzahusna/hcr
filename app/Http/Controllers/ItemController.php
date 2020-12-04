@@ -17,7 +17,7 @@ class ItemController extends Controller
     
     public function index()
     {
-        $user_id = Auth::id();
+        // $user_id = Auth::id();
         $items = Item::all();    
         $data = [
             'items' => $items
@@ -33,15 +33,14 @@ class ItemController extends Controller
 
     public function store(Request $request)
     {
-        $user_id = Auth::id();
+        // $user_id = Auth::id();
 
-        $items = Item::where('user_id', $user_id)->get();
+        // $items = Item::where('user_id', $user_id)->get();
 
         Item::create([
-            'user_id' => $user_id,
             'title' => $request ->title,
             'reference' => $request ->reference,
-            'result' => $request ->result,
+            'score' => $request ->score,
         ]);
         //
         // $item=new Item();
