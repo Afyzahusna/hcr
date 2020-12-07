@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -30,20 +30,16 @@
 
                         Reference 
                         <input name="reference" type="text" class="form-control">
-                        Score
-                        <input name="score" type="text" class="form-control">
-
-                       <!-- Description 
-                        <input name="description" type="text"
-                        class="form-control">
-                        Trainer 
-                        <input name="trainer" type="text"
-                        class="form-control"> -->
-                       
+                        
                         {{-- <input type=file 
                         <input type="file"
                         name="attachment"
-                        class="form-control">  --}}
+                        {{-- class="form-control">  --}}
+
+                        Score
+                        <input name="score" type="text" class="form-control">
+
+                        
 
                         <!-- submit button -->
                         <br>    

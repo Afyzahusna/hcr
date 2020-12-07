@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container">
@@ -58,7 +58,7 @@
                                 });
                                  $('#total').text( total.toFixed(2) );
                                 });
-                            </script> --}}
+                            </script>    //notworking--}}
                         </div>
                         <td><a class="btn btn-success btn-sm" href=""> Show <i class="fa fa-list-alt">
                             </i>

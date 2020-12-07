@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ItemController;
 use App\Models\Item;
+use App\Http\Controllers\CategoryController;
+use App\Models\Category;
+use App\Models\Subcategory;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,7 +18,7 @@ use App\Models\Item;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landingpage');
 });
 
 Auth::routes();
@@ -29,10 +32,14 @@ Auth::routes();
 // });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/item', [ItemController::class, 'index']) ->name('items.index');
-Route::get('/item/create', [ItemController::class, 'create'])->name('items.create');
+Route::get('/item', [ItemController::class, 'items.index']) ->name('items.index');
+Route::get('/item/create', [ItemController::class, 'items.create'])->name('items.create');
 Route::post('/item', [ItemController::class, 'store']);
 
+Route::get('categories',[CategoryController::class, 'category.index']);
+Route::get('categories',[CategoryController::class, 'category.create']);
+Route::get('categories',[CategoryController::class, 'category.store']);
+Route::get('categories/{id}', function ($category_id){});;
 
 // Route::get('item', 'ItemController@index');
 // Route::get('item/create', 'ItemController@create');
